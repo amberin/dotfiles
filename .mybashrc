@@ -1,20 +1,13 @@
-# .bashrc
-
-# Source global definitions
-if [ -f /etc/bashrc ]; then
-	. /etc/bashrc
-fi
-
-# Uncomment the following line if you don't like systemctl's auto-paging feature:
-# export SYSTEMD_PAGER=
-
-# User specific aliases and functions
+# .mybashrc
 
 shopt -s histappend # Append new history items to .bash_history
 export HISTCONTROL=ignorespace:ignoreboth:erasedups # Leading space hides commands from history; avoid duplicate entries in .bash_history
+
 export HISTSIZE=100000
 export HISTFILESIZE=${HISTSIZE}
 
 PATH=$PATH:$HOME/.local/bin:$HOME/bin
 export PATH
+
+# GnuPG 1.x is always installed in RHEL for some reason
 alias gpg=gpg2
